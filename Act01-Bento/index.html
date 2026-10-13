@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray-Ban Meta | Bento Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid px-3 px-md-5">
+
+        <!-- HEADER -->
+        <header class="bento-header mb-3">
+            <nav class="d-flex align-items-center justify-content-between w-100">
+                <a href="#" class="brand">
+                    <img src="images/Rayban_Meta-Logo.png" alt="Ray-Ban Meta" class="brand-logo">
+                </a>
+                <ul class="nav-links list-unstyled d-flex gap-4 mb-0">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#styles">Styles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main class="row g-3" id="features">
+
+            <!-- LEFT -->
+            <div class="col-12 col-lg-6 bento-stack">
+
+                <!-- 01 -->
+                <article class="bento-box box-1">
+                    <p class="box-label">01 / Ray-Ban Meta (Gen 3)</p>
+                    <h2 class="box-tagline">Iconic style. Next-gen smarts.</h2>
+                    <img src="images/Wayfarer-Front.png" alt="Ray-Ban Meta Wayfarer, front view" class="img-contain">
+                </article>
+
+                <!-- 02 -->
+                <article class="bento-box box-4">
+                    <p class="box-label">02 / Camera</p>
+                    <img src="images/Zena_Model.png" alt="Model wearing Ray-Ban Meta glasses" class="box-photo">
+                    <p class="big-stat">12MP</p>
+                    <h3 class="box-title">Capture what you see, hands-free</h3>
+                    <p class="box-desc">Ultra-wide camera for HD photos and videos, from your point of view</p>
+                </article>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-12 col-lg-6 bento-stack">
+                <div class="row g-3">
+
+                    <!-- MIDDLE -->
+                    <div class="col-12 col-sm-6 bento-stack">
+
+                        <!-- 03 -->
+                        <article class="bento-box box-2">
+                            <img src="images/Charging_Case.png" alt="Ray-Ban Meta charging case"
+                                class="bg-img case-img">
+                            <p class="box-label">03 / Battery</p>
+                            <div class="box-bottom">
+                                <p class="big-stat stat-orange">9h</p>
+                                <p class="stat-text">up to 50 hours with the charging case</p>
+                            </div>
+                        </article>
+
+                        <!-- 05 -->
+                        <article class="bento-box box-5">
+                            <img src="images/phone_images.png" alt="" class="bg-img phone-img">
+                            <p class="box-label">05 / Storage</p>
+                            <div class="box-bottom">
+                                <p class="big-stat">32GB</p>
+                                <p class="stat-text stat-red">up to 1000 photos or 100+ 30s videos</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="col-12 col-sm-6 bento-stack">
+
+                        <!-- 04 -->
+                        <article class="bento-box box-3">
+                            <svg class="bg-img wave" viewBox="0 0 142 120" aria-hidden="true">
+                                <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+                                    <line x1="6" y1="49" x2="6" y2="71" />
+                                    <line x1="32" y1="32" x2="32" y2="88" />
+                                    <line x1="58" y1="4" x2="58" y2="116" />
+                                    <line x1="84" y1="40" x2="84" y2="80" />
+                                    <line x1="110" y1="18" x2="110" y2="102" />
+                                    <line x1="136" y1="49" x2="136" y2="71" />
+                                </g>
+                            </svg>
+                            <p class="box-label">04 / Audio</p>
+                            <div class="box-bottom">
+                                <h3 class="box-title">Open-ear audio</h3>
+                                <p class="box-desc">Custom 6-mic array. Calls and music, nothing in your ears.</p>
+                            </div>
+                        </article>
+
+                        <!-- 06 -->
+                        <article class="bento-box box-6">
+                            <p class="box-label">06 / Meta AI</p>
+                            <div class="ai-title">
+                                <img src="images/Meta_AI-Logo.png" alt="Meta AI logo">
+                                <h2>Hey Meta.</h2>
+                            </div>
+                            <div class="chat">
+                                <p class="bubble bubble-user">Hey Meta, take a photo.</p>
+                                <p class="bubble bubble-ai">Got it. Photo captured.</p>
+                            </div>
+                            <p class="box-desc ask">Ask anything, hands-free.</p>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- 07 -->
+                <article class="bento-box box-7">
+                    <img src="images/Aviator-Back.png" alt="" class="bg-img aviator-img">
+                    <p class="box-label">07 / Get yours</p>
+                    <div class="cta">
+                        <h2>Get your pair now.</h2>
+                        <a class="store-link" role="button" tabindex="0">Find a store <span
+                                class="arrow">&rarr;</span></a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- BELOW THE FOLD -->
+            <div class="col-12" id="styles">
+                <div class="bento-box box-8"></div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bento-footer">
+            <p class="mb-0">&copy; 2026 Your Name. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

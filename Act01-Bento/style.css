@@ -1,0 +1,332 @@
+:root {
+    --gap: 1rem;
+    /* mas mataas na minimum para laging kasya ang laman ng boxes */
+    --h: max(38rem, calc(100vh - 7.5rem));
+    --s: calc(var(--h) * 0.68 - var(--gap));
+
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-stat: 'Space Mono', monospace;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --stat-size: clamp(2.6rem, 8vh, 5rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3eee6;
+    font-family: var(--font-mono);
+    color: #3b2f22;
+}
+
+/* ---------- HEADER ---------- */
+.bento-header {
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(60, 45, 30, 0.1);
+}
+
+.brand-logo {
+    height: 3rem;
+    width: auto;
+    display: block;
+}
+
+.nav-links a {
+    color: #3b2f22;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ---------- FOOTER ---------- */
+.bento-footer {
+    text-align: center;
+    color: #8a7e6d;
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+}
+
+/* ---------- BOX BASE ---------- */
+.bento-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.bento-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1.1rem 1.4rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* text laging nasa ibabaw ng background images */
+.bento-box > :not(.bg-img) {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-img {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.box-label {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.box-bottom {
+    margin-top: auto;
+}
+
+.big-stat {
+    margin: 0;
+    font-family: var(--font-stat);
+    font-weight: 700;
+    font-size: var(--stat-size);
+    line-height: 1;
+    color: #8a4a14;
+}
+
+.stat-orange { color: #e3a45f; }
+
+.stat-text {
+    margin: 0.6rem 0 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.stat-red { color: #8a1f0f; }
+
+.box-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4a2f1a;
+}
+
+.box-desc {
+    margin: 0.4rem 0 0;
+    font-size: 0.75rem;
+    line-height: 1.45;
+}
+
+.img-contain {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 0.5rem;
+}
+
+/* ---------- BOX HEIGHTS & BACKGROUNDS ---------- */
+/* walang min-height dito para laging pantay ang mga baba */
+
+/* left column */
+.box-1 { height: calc(var(--h) * 0.36); background: linear-gradient(90deg, #ffffff, #f2e4d0); }
+.box-4 { height: calc(var(--h) * 0.64); background: linear-gradient(135deg, #e9dcc3, #dcc4a0); }
+
+/* middle column */
+.box-2 { height: calc(var(--s) * 0.45); background: linear-gradient(135deg, #4b5a3f, #2d3b2a); color: #ffffff; }
+.box-5 { height: calc(var(--s) * 0.55); background: #ffffff; }
+
+/* right column */
+.box-3 { height: calc(var(--s) * 0.35); background: #ffffff; }
+.box-6 { height: calc(var(--s) * 0.65); background: linear-gradient(90deg, #dfe8d3, #f7faf3); }
+
+/* wide brown box */
+.box-7 { height: calc(var(--h) * 0.32); background: linear-gradient(135deg, #7c4a25, #5b3718); color: #ffffff; }
+
+/* bottom white box (kita lang pag nag-scroll) */
+.box-8 { height: 9rem; background: #ffffff; }
+
+/* ---------- 01 ---------- */
+.box-tagline {
+    margin: 1.1rem 0 0;
+    text-align: center;
+    font-size: clamp(1rem, 2.4vh, 1.5rem);
+    font-weight: 500;
+}
+
+/* mas malaki ang glasses (may transparent padding kasi ang PNG) */
+.box-1 .img-contain {
+    margin-top: 0.5rem;
+    transform: scale(1.7);
+}
+
+/* ---------- 02 ---------- */
+.box-photo {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 22px;
+    margin: 0.8rem 0 0;
+}
+
+.box-4 .big-stat {
+    margin-top: 1rem;
+    font-size: clamp(2.4rem, 7vh, 4.4rem);
+    line-height: 0.95;
+}
+
+.box-4 .box-title {
+    margin-top: 0.7rem;
+}
+
+.box-4 .box-desc {
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    color: #5a4636;
+}
+
+/* ---------- 03 ---------- */
+.case-img {
+    top: -4%;
+    right: -10%;
+    width: 84%;
+    opacity: 0.5;
+}
+
+/* ---------- 04 ---------- */
+.wave {
+    top: 28%;
+    right: 6.5%;
+    height: 52%;
+    color: #1a1a1a;
+}
+
+.box-3 .box-desc {
+    max-width: 92%;
+}
+
+/* ---------- 05 ---------- */
+.phone-img {
+    right: 0;
+    bottom: -8%;
+    height: 96%;
+    width: auto;
+    opacity: 0.3;
+}
+
+/* ---------- 06 ---------- */
+.ai-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.ai-title img {
+    height: clamp(1.6rem, 3.6vh, 2.2rem);
+    width: auto;
+}
+
+.ai-title h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4.6vh, 2.7rem);
+    color: #3b4a32;
+}
+
+.chat {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.bubble {
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    border-radius: 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    max-width: 85%;
+}
+
+.bubble-user {
+    align-self: flex-end;
+    background: #3b4a32;
+    color: #ffffff;
+}
+
+.bubble-ai {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #3b2f22;
+}
+
+.ask {
+    margin-top: auto;
+    font-size: 0.85rem;
+}
+
+/* ---------- 07 ---------- */
+/* buo ang lens/frame, mas mababa; yung arms na lang ang pwedeng macrop */
+.aviator-img {
+    left: 0;
+    top: 12%;
+    width: 100%;
+    height: 104%;
+    object-fit: contain;
+    opacity: 0.2;
+}
+
+.cta {
+    margin: auto 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vh, 2.4rem);
+}
+
+.store-link {
+    display: inline-block;
+    margin-top: 0.9rem;
+    color: #f0b25f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.store-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.store-link:hover {
+    color: #ffd08a;
+}
+
+.store-link:hover .arrow {
+    transform: translateX(5px);
+}
