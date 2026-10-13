@@ -352,7 +352,9 @@ body {
 }
 
 .store-link {
-    display: inline-block;
+    display: inline-flex;      
+    align-items: center;       
+    gap: 0.4rem;
     margin-top: 0.9rem;
     color: #f0b25f;
     font-size: 0.9rem;
