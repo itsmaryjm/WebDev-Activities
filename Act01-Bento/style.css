@@ -1,6 +1,5 @@
 :root {
     --gap: 1rem;
-    /* mas mataas na minimum para laging kasya ang laman ng boxes */
     --h: max(38rem, calc(100vh - 7.5rem));
     --s: calc(var(--h) * 0.68 - var(--gap));
 
@@ -20,7 +19,6 @@ body {
     color: #3b2f22;
 }
 
-/* ---------- HEADER ---------- */
 .bento-header {
     min-height: 4.5rem;
     display: flex;
@@ -46,7 +44,6 @@ body {
     text-underline-offset: 4px;
 }
 
-/* ---------- FOOTER ---------- */
 .bento-footer {
     text-align: center;
     color: #8a7e6d;
@@ -54,7 +51,6 @@ body {
     padding: 1.5rem 0;
 }
 
-/* ---------- BOX BASE ---------- */
 .bento-stack {
     display: flex;
     flex-direction: column;
@@ -71,7 +67,6 @@ body {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
 }
 
-/* text laging nasa ibabaw ng background images */
 .bento-box > :not(.bg-img) {
     position: relative;
     z-index: 1;
@@ -136,25 +131,18 @@ body {
     margin-top: 0.5rem;
 }
 
-/* ---------- BOX HEIGHTS & BACKGROUNDS ---------- */
-/* walang min-height dito para laging pantay ang mga baba */
 
-/* left column */
 .box-1 { height: calc(var(--h) * 0.36); background: linear-gradient(90deg, #ffffff, #f2e4d0); }
 .box-4 { height: calc(var(--h) * 0.64); background: linear-gradient(135deg, #e9dcc3, #dcc4a0); }
 
-/* middle column */
 .box-2 { height: calc(var(--s) * 0.45); background: linear-gradient(135deg, #4b5a3f, #2d3b2a); color: #ffffff; }
 .box-5 { height: calc(var(--s) * 0.55); background: #ffffff; }
 
-/* right column */
 .box-3 { height: calc(var(--s) * 0.35); background: #ffffff; }
 .box-6 { height: calc(var(--s) * 0.65); background: linear-gradient(90deg, #dfe8d3, #f7faf3); }
 
-/* wide brown box */
 .box-7 { height: calc(var(--h) * 0.32); background: linear-gradient(135deg, #7c4a25, #5b3718); color: #ffffff; }
 
-/* ---------- 08 ---------- */
 .box-8 {
     background: #ffffff;
     padding-bottom: 1.4rem;
@@ -222,7 +210,7 @@ body {
     outline-offset: 2px;
 }
 
-/* ---------- 01 ---------- */
+
 .box-tagline {
     margin: 1.1rem 0 0;
     text-align: center;
@@ -230,13 +218,11 @@ body {
     font-weight: 500;
 }
 
-/* mas malaki ang glasses (may transparent padding kasi ang PNG) */
 .box-1 .img-contain {
     margin-top: 0.5rem;
     transform: scale(1.7);
 }
 
-/* ---------- 02 ---------- */
 .box-photo {
     flex: 1 1 0;
     min-height: 0;
@@ -264,7 +250,6 @@ body {
     color: #5a4636;
 }
 
-/* ---------- 03 ---------- */
 .case-img {
     top: -4%;
     right: -10%;
@@ -272,19 +257,18 @@ body {
     opacity: 0.5;
 }
 
-/* ---------- 04 ---------- */
 .wave {
-    top: 28%;
-    right: 6.5%;
-    height: 52%;
+    top: 1.1rem;        
+    right: 1.4rem;
+    height: 1.6rem;     
+    width: auto;
     color: #1a1a1a;
 }
 
 .box-3 .box-desc {
-    max-width: 92%;
+    max-width: 100%;
 }
 
-/* ---------- 05 ---------- */
 .phone-img {
     right: 0;
     bottom: -8%;
@@ -293,7 +277,6 @@ body {
     opacity: 0.3;
 }
 
-/* ---------- 06 ---------- */
 .ai-title {
     display: flex;
     align-items: center;
@@ -347,8 +330,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* ---------- 07 ---------- */
-/* buo ang lens/frame, mas mababa; yung arms na lang ang pwedeng macrop */
 .aviator-img {
     left: 0;
     top: 12%;
