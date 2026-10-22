@@ -1,0 +1,441 @@
+:root {
+  --oxblood: #5c1a22;
+  --oxblood-dark: #43121a;
+  --ivory: #f7f1e5;
+  --ivory-dark: #ece3d0;
+  --walnut: #3a2a22;
+  --walnut-light: #5a4234;
+  --brass: #a8873f;
+  --brass-light: #cfae62;
+  --ink: #2a1f1c;
+  --muted: #7a6a62;
+  --line: #d9cdb6;
+}
+
+body {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.15rem;
+  background-color: var(--ivory);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--oxblood);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 3.5rem;
+}
+
+.masthead {
+  background-color: var(--oxblood);
+  color: var(--ivory);
+}
+
+.masthead-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.masthead-sub {
+  font-style: italic;
+  color: var(--brass-light);
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.site-nav {
+  background-color: var(--oxblood-dark);
+  border-top: 1px solid var(--brass);
+  border-bottom: 1px solid var(--brass);
+}
+
+.site-nav .navbar-brand {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.site-nav .nav-link {
+  color: var(--ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.site-nav .nav-link:hover {
+  color: var(--brass-light);
+}
+
+.btn-brass {
+  background-color: var(--brass);
+  border: 1px solid var(--brass);
+  color: var(--oxblood-dark);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.btn-brass:hover,
+.btn-brass:focus {
+  background-color: var(--brass-light);
+  border-color: var(--brass-light);
+  color: var(--oxblood-dark);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid var(--brass-light);
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  background-color: var(--brass-light);
+  border-color: var(--brass-light);
+  color: var(--oxblood-dark);
+}
+
+.hero {
+  background-color: var(--oxblood);
+}
+
+.hero-frame {
+  border: 1px solid var(--brass);
+  outline: 1px solid var(--brass);
+  outline-offset: 6px;
+  color: var(--ivory);
+}
+
+.hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  color: var(--brass-light);
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.05;
+  color: var(--ivory);
+  font-weight: 600;
+}
+
+.hero-text {
+  color: var(--ivory-dark);
+  max-width: 36rem;
+}
+
+.section-label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  color: var(--brass);
+  font-weight: 600;
+}
+
+.section-head h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.rule {
+  height: 6px;
+  border-top: 1px solid var(--brass);
+  border-bottom: 1px solid var(--brass);
+  width: 6rem;
+  margin: 0 auto;
+}
+
+.index-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  width: 100%;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0.5rem;
+  text-align: left;
+  color: var(--ink);
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.index-row:hover {
+  background-color: var(--ivory-dark);
+  padding-left: 1.25rem;
+}
+
+.index-numeral {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--brass);
+  font-weight: 700;
+  min-width: 2.5rem;
+}
+
+.index-name {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--oxblood);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.index-leader {
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--muted);
+  transform: translateY(-0.35rem);
+}
+
+.index-count {
+  font-style: italic;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.catalogue-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--brass);
+  display: block;
+}
+
+.catalogue-input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--walnut);
+  padding: 0.4rem 0;
+  font-size: 1.25rem;
+  color: var(--ink);
+  border-radius: 0;
+}
+
+.catalogue-input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--oxblood);
+}
+
+.filter-btn {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.filter-btn:hover {
+  color: var(--oxblood);
+}
+
+.filter-btn.active {
+  color: var(--oxblood);
+  border-bottom-color: var(--brass);
+  font-weight: 600;
+}
+
+.result-count {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.shelf-slot {
+  margin-bottom: 2.5rem;
+}
+
+.book-stage {
+  perspective: 900px;
+  padding: 0 1.25rem;
+  border-bottom: 14px solid var(--walnut);
+  box-shadow: 0 8px 10px -4px rgba(42, 31, 28, 0.35);
+}
+
+.book-wrap {
+  cursor: pointer;
+  display: block;
+}
+
+.book {
+  position: relative;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 4px 6px 10px rgba(42, 31, 28, 0.35);
+  border-radius: 2px 5px 5px 2px;
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px 5px 5px 2px;
+  background-color: var(--ivory-dark);
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 9%;
+  border-radius: 2px 0 0 2px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.35),
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(0, 0, 0, 0.12) 70%,
+    transparent
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  right: -5px;
+  width: 6px;
+  border-radius: 0 3px 3px 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f4ecda 0,
+    #f4ecda 2px,
+    #d8ccb2 2px,
+    #d8ccb2 3px
+  );
+  z-index: -1;
+}
+
+.book-wrap:hover .book,
+.book-wrap:focus .book {
+  transform: translateY(-12px) rotateY(-16deg);
+  box-shadow: 14px 18px 22px rgba(42, 31, 28, 0.4);
+}
+
+.book-info {
+  padding: 0.9rem 1.25rem 0;
+}
+
+.book-title {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--oxblood);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.book-author {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.book-genre {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  color: var(--brass);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-wrap:hover .book-genre,
+.book-wrap:focus .book-genre {
+  opacity: 1;
+}
+
+.about-text {
+  color: var(--walnut-light);
+  font-size: 1.25rem;
+}
+
+.modal-content {
+  background-color: var(--ivory);
+  border: 1px solid var(--brass);
+  border-radius: 0;
+  outline: 1px solid var(--brass);
+  outline-offset: -8px;
+}
+
+.record-label {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  color: var(--brass);
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--oxblood);
+}
+
+.modal-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px 5px 5px 2px;
+  box-shadow: 4px 6px 12px rgba(42, 31, 28, 0.35);
+  background-color: var(--ivory-dark);
+}
+
+.record-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.record-row dt {
+  min-width: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--brass);
+  padding-top: 0.3rem;
+  font-weight: 600;
+}
+
+.record-row dd {
+  margin: 0;
+}
+
+.site-footer {
+  background-color: var(--oxblood);
+  color: var(--ivory);
+  border-top: 1px solid var(--brass);
+}
+
+.footer-note {
+  font-style: italic;
+  color: var(--brass-light);
+}
+
+.site-footer small {
+  color: var(--ivory-dark);
+  opacity: 0.8;
+}

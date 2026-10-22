@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "The Love Hypothesis",
+    "author": "Ali Hazelwood",
+    "genre": ["Romance"],
+    "publicationDate": "September 14, 2021",
+    "description": "Olive, a Stanford PhD student, pretends to date the notoriously intimidating professor Adam Carlsen to convince her best friend that she has moved on. The longer the act goes on, the harder it gets to tell what's real and what's just for show.",
+    "cover": "images/the-love-hypothesis.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Better Than the Movies",
+    "author": "Lynn Painter",
+    "genre": ["Romance"],
+    "publicationDate": "May 4, 2021",
+    "description": "Liz is a devoted rom-com fan who wants her own movie-worthy love story with her longtime crush before prom. She teams up with Wes, her next-door neighbor and childhood nemesis, but the real romance may be closer to home than she thinks.",
+    "cover": "images/better-than-the-movies.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Book Lovers",
+    "author": "Emily Henry",
+    "genre": ["Romance"],
+    "publicationDate": "May 3, 2022",
+    "description": "Nora is a sharp, workaholic literary agent who always ends up as the \"other woman\" in everyone else's love stories. When a trip to a small town with her sister Libby brings her face to face with a rival editor, her story starts to take an unexpected turn.",
+    "cover": "images/book-lovers.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Tress of the Emerald Sea",
+    "author": "Brandon Sanderson",
+    "genre": ["Fantasy"],
+    "publicationDate": "April 4, 2023",
+    "description": "Tress leads a quiet life on her island until her friend Charlie is swept away on a dangerous voyage. She stows away on a ship and crosses a deadly sea to find the Sorceress who can help save him.",
+    "cover": "images/tress-of-the-emerald-sea.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Starless Sea",
+    "author": "Erin Morgenstern",
+    "genre": ["Fantasy"],
+    "publicationDate": "November 5, 2019",
+    "description": "Zachary finds a mysterious book that seems strangely connected to his own life. Following it leads him to a hidden underground world filled with stories, secrets, and endless books.",
+    "cover": "images/the-starless-sea.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": ["Mystery & Thriller"],
+    "publicationDate": "February 5, 2019",
+    "description": "Alicia, a famous painter, murdered her husband and hasn't spoken a word since. Theo, a psychotherapist, is determined to uncover the truth behind her silence.",
+    "cover": "images/the-silent-patient.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": ["Mystery & Thriller"],
+    "publicationDate": "March 18, 2003",
+    "description": "After the murder of a Louvre curator, symbologist Robert Langdon and cryptologist Sophie Neveu race through a trail of codes and clues. Each one brings them closer to a long-buried secret tied to religious history.",
+    "cover": "images/the-da-vinci-code.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Seven Husbands of Evelyn Hugo",
+    "author": "Taylor Jenkins Reid",
+    "genre": ["Contemporary Fiction"],
+    "publicationDate": "June 13, 2017",
+    "description": "Reclusive Hollywood icon Evelyn Hugo chooses young journalist Monique Grant to write her life story. Through each marriage and sacrifice, the truth behind the glamour slowly comes out.",
+    "cover": "images/the-seven-husbands-of-evelyn-hugo.webp"
+  },
+  {
+    "id": 9,
+    "title": "Yellowface",
+    "author": "R. F. Kuang",
+    "genre": ["Contemporary Fiction"],
+    "publicationDate": "May 16, 2023",
+    "description": "June, a struggling author, takes the unpublished manuscript of her recently deceased acquaintance and publishes it as her own. Her success comes quickly, but so does the fear of being exposed.",
+    "cover": "images/yellowface.png"
+  }
+]
