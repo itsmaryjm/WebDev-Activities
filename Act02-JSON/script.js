@@ -20,7 +20,6 @@ const surpriseBtn = document.getElementById("surpriseBtn");
 const bookModalEl = document.getElementById("bookModal");
 const bookModal = new bootstrap.Modal(bookModalEl);
 
-// Load the JSON file
 fetch("books.json")
   .then((response) => {
     if (!response.ok) {
@@ -43,7 +42,6 @@ fetch("books.json")
       "</div></div>";
   });
 
-// Get a sorted list of unique genres from the data
 function getGenres() {
   const genres = [];
   books.forEach((book) => {
@@ -147,27 +145,23 @@ function openBook(id) {
   bookModal.show();
 }
 
-// Genre filter buttons
 genreFilters.addEventListener("click", (event) => {
   const btn = event.target.closest("[data-genre]");
   if (!btn) return;
   setGenre(btn.dataset.genre);
 });
 
-// Search
 searchInput.addEventListener("input", (event) => {
   searchQuery = event.target.value;
   renderBooks();
 });
 
-// Open details modal
 bookGrid.addEventListener("click", (event) => {
   const card = event.target.closest(".book-wrap");
   if (!card) return;
   openBook(card.dataset.id);
 });
 
-// Keyboard: open a book with Enter or Space
 bookGrid.addEventListener("keydown", (event) => {
   if (event.key !== "Enter" && event.key !== " ") return;
   const card = event.target.closest(".book-wrap");
@@ -176,7 +170,6 @@ bookGrid.addEventListener("keydown", (event) => {
   openBook(card.dataset.id);
 });
 
-// Surprise Me: random book from the current filtered list (or all books if none match)
 surpriseBtn.addEventListener("click", () => {
   if (books.length === 0) return;
   const pool = getFilteredBooks();
