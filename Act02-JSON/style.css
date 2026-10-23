@@ -32,7 +32,6 @@ section[id] {
   scroll-margin-top: 3.5rem;
 }
 
-/* Masthead + navbar */
 .masthead {
   background-color: var(--oxblood);
   color: var(--ivory);
@@ -78,7 +77,6 @@ section[id] {
   color: var(--brass-light);
 }
 
-/* Ask the Librarian button */
 .btn-librarian {
   background-color: var(--oxblood);
   border: 1px solid var(--brass);
@@ -99,7 +97,6 @@ section[id] {
   color: var(--oxblood-dark);
 }
 
-/* Hero */
 .hero {
   background-color: var(--oxblood);
 }
@@ -130,7 +127,6 @@ section[id] {
   max-width: 36rem;
 }
 
-/* Section heading: title, brass rule, count */
 .section-heading {
   display: flex;
   align-items: baseline;
@@ -152,7 +148,6 @@ section[id] {
   transform: translateY(-0.4rem);
 }
 
-/* Catalogue search + filters */
 .catalogue-label {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -203,12 +198,10 @@ section[id] {
   white-space: nowrap;
 }
 
-/* Shelf rows */
 .shelf-slot {
   margin-bottom: 2.5rem;
 }
 
-/* The wooden shelf: a continuous plank under each row of books */
 .book-stage {
   perspective: 900px;
   padding: 0 1.25rem;
@@ -239,7 +232,6 @@ section[id] {
   background-color: var(--ivory-dark);
 }
 
-/* Spine crease */
 .book::before {
   content: "";
   position: absolute;
@@ -259,7 +251,6 @@ section[id] {
   z-index: 2;
 }
 
-/* Page edge on the right */
 .book::after {
   content: "";
   position: absolute;
@@ -315,7 +306,6 @@ section[id] {
   opacity: 1;
 }
 
-/* Catalogue record modal */
 .modal-content {
   background-color: var(--ivory);
   border: 1px solid var(--brass);
