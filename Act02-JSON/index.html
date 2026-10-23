@@ -12,11 +12,13 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="masthead text-center py-3">
+    <!-- Masthead (large screens only; small screens show the brand in the navbar) -->
+    <div class="masthead text-center py-3 d-none d-lg-block">
       <div class="masthead-name">Between the Pages</div>
-      <div class="masthead-sub">A Reading Room &middot; Est. 2026</div>
+      <div class="masthead-sub">A Book Discovery Catalogue &middot; Est. 2026</div>
     </div>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top site-nav" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand d-lg-none" href="#home">Between the Pages</a>
@@ -26,88 +28,54 @@
         <div class="collapse navbar-collapse justify-content-center" id="navMenu">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#genres">Collections</a></li>
             <li class="nav-item"><a class="nav-link" href="#books">The Stacks</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- Hero -->
     <header id="home" class="hero py-5">
       <div class="container py-3">
         <div class="hero-frame text-center py-5 px-3">
-          <p class="eyebrow mb-3">Welcome to the reading room</p>
+          <p class="eyebrow mb-3">Browse &middot; Search &middot; Discover</p>
           <h1 class="hero-title mb-3">Find your next story.</h1>
-          <p class="hero-text mx-auto mb-4">
-            Between the Pages is a book discovery website. Browse the collections, search the catalogue
-            by title or author, and open any volume to read about it.
+          <p class="hero-text mx-auto mb-0">
+            Between the Pages is a book discovery website. Search the catalogue by title or author,
+            filter by genre, and open any volume to read about it.
           </p>
-          <a href="#books" class="btn btn-brass btn-lg me-2 mb-2">Enter the Stacks</a>
-          <button type="button" class="btn btn-ghost btn-lg mb-2" id="surpriseBtn">Ask the Librarian</button>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="genres" class="py-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="section-head text-center mb-4">
-                <p class="section-label mb-1">I.</p>
-                <h2>The Collections</h2>
-                <div class="rule"></div>
-              </div>
-              <div id="genreCards"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <!-- The Stacks -->
       <section id="books" class="py-5">
         <div class="container">
-          <div class="section-head text-center mb-4">
-            <p class="section-label mb-1">II.</p>
+          <div class="section-heading mb-4">
             <h2>The Stacks</h2>
-            <div class="rule"></div>
+            <span class="heading-rule"></span>
+            <span class="result-count" id="resultCount"></span>
           </div>
 
-          <div class="row g-3 align-items-end mb-4">
-            <div class="col-lg-5">
+          <div class="row g-3 align-items-end mb-3">
+            <div class="col-12 col-md-8">
               <label for="searchInput" class="catalogue-label">Search the catalogue</label>
               <input type="search" class="catalogue-input w-100" id="searchInput" placeholder="Title or author">
             </div>
-            <div class="col-lg-7">
-              <div class="d-flex flex-wrap gap-3 justify-content-lg-end" id="genreFilters"></div>
+            <div class="col-12 col-md-4 d-md-flex justify-content-md-end">
+              <button type="button" class="btn btn-librarian" id="surpriseBtn">Ask the Librarian</button>
             </div>
           </div>
 
-          <p class="result-count mb-4" id="resultCount"></p>
+          <div class="d-flex flex-wrap gap-4 mb-5" id="genreFilters"></div>
+
           <div class="row g-0" id="bookGrid"></div>
-        </div>
-      </section>
-
-      <section id="about" class="py-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-7 text-center">
-              <div class="section-head mb-4">
-                <p class="section-label mb-1">III.</p>
-                <h2>About the Library</h2>
-                <div class="rule"></div>
-              </div>
-              <p class="about-text">
-                Between the Pages is a book discovery website. You can explore books and learn about them,
-                but the library doesn't sell, host, or lend copies of any book. Every volume on the shelves
-                is loaded from a JSON file.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
     </main>
 
+    <!-- Catalogue Record (Book Details Modal) -->
     <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -147,11 +115,14 @@
       </div>
     </div>
 
-    <footer class="site-footer py-4">
+    <!-- Footer -->
+    <footer class="site-footer py-3">
       <div class="container text-center">
-        <div class="masthead-name mb-1">Between the Pages</div>
-        <div class="footer-note mb-2">The reading room is open 24 hours.</div>
-        <small>A web development project for Activity 2 (JSON integration). Book details and covers belong to their respective authors and publishers.</small>
+        <div class="footer-name mb-1">Between the Pages</div>
+        <small>
+          Not a bookstore: this site doesn't sell, host, or lend books. A web development project for Activity 2
+          (JSON integration). Book details and covers belong to their respective authors and publishers.
+        </small>
       </div>
     </footer>
 

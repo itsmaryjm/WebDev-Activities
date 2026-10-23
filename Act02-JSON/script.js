@@ -13,7 +13,6 @@ let activeGenre = "All";
 let searchQuery = "";
 
 const bookGrid = document.getElementById("bookGrid");
-const genreCards = document.getElementById("genreCards");
 const genreFilters = document.getElementById("genreFilters");
 const searchInput = document.getElementById("searchInput");
 const resultCount = document.getElementById("resultCount");
@@ -21,6 +20,7 @@ const surpriseBtn = document.getElementById("surpriseBtn");
 const bookModalEl = document.getElementById("bookModal");
 const bookModal = new bootstrap.Modal(bookModalEl);
 
+// Load the JSON file
 fetch("books.json")
   .then((response) => {
     if (!response.ok) {
@@ -30,7 +30,6 @@ fetch("books.json")
   })
   .then((data) => {
     books = data;
-    renderGenreCards();
     renderGenreFilters();
     renderBooks();
   })
@@ -44,6 +43,7 @@ fetch("books.json")
       "</div></div>";
   });
 
+// Get a sorted list of unique genres from the data
 function getGenres() {
   const genres = [];
   books.forEach((book) => {
@@ -60,32 +60,15 @@ function countByGenre(genre) {
   return books.filter((book) => book.genre.includes(genre)).length;
 }
 
-const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
-
-function renderGenreCards() {
-  genreCards.innerHTML = getGenres()
-    .map((genre, i) => {
-      const n = countByGenre(genre);
-      return `
-      <button type="button" class="index-row" data-genre="${genre}">
-        <span class="index-numeral">${ROMAN[i] || i + 1}.</span>
-        <span class="index-name">${genre}</span>
-        <span class="index-leader"></span>
-        <span class="index-count">${n} ${n === 1 ? "volume" : "volumes"}</span>
-      </button>`;
-    })
-    .join("");
-}
-
 function renderGenreFilters() {
   const genres = ["All", ...getGenres()];
   genreFilters.innerHTML = genres
-    .map(
-      (genre) =>
-        `<button type="button" class="filter-btn${
-          genre === activeGenre ? " active" : ""
-        }" data-genre="${genre}">${genre}</button>`
-    )
+    .map((genre) => {
+      const n = genre === "All" ? books.length : countByGenre(genre);
+      return `<button type="button" class="filter-btn${
+        genre === activeGenre ? " active" : ""
+      }" data-genre="${genre}">${genre} (${n})</button>`;
+    })
     .join("");
 }
 
@@ -106,7 +89,7 @@ function renderBooks() {
   const filtered = getFilteredBooks();
 
   resultCount.textContent =
-    filtered.length + (filtered.length === 1 ? " book" : " books");
+    filtered.length + (filtered.length === 1 ? " volume" : " volumes");
 
   if (filtered.length === 0) {
     bookGrid.innerHTML =
@@ -164,30 +147,27 @@ function openBook(id) {
   bookModal.show();
 }
 
-genreCards.addEventListener("click", (event) => {
-  const card = event.target.closest("[data-genre]");
-  if (!card) return;
-  setGenre(card.dataset.genre);
-  document.getElementById("books").scrollIntoView();
-});
-
+// Genre filter buttons
 genreFilters.addEventListener("click", (event) => {
   const btn = event.target.closest("[data-genre]");
   if (!btn) return;
   setGenre(btn.dataset.genre);
 });
 
+// Search
 searchInput.addEventListener("input", (event) => {
   searchQuery = event.target.value;
   renderBooks();
 });
 
+// Open details modal
 bookGrid.addEventListener("click", (event) => {
   const card = event.target.closest(".book-wrap");
   if (!card) return;
   openBook(card.dataset.id);
 });
 
+// Keyboard: open a book with Enter or Space
 bookGrid.addEventListener("keydown", (event) => {
   if (event.key !== "Enter" && event.key !== " ") return;
   const card = event.target.closest(".book-wrap");
@@ -196,6 +176,7 @@ bookGrid.addEventListener("keydown", (event) => {
   openBook(card.dataset.id);
 });
 
+// Surprise Me: random book from the current filtered list (or all books if none match)
 surpriseBtn.addEventListener("click", () => {
   if (books.length === 0) return;
   const pool = getFilteredBooks();
