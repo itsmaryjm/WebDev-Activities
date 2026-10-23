@@ -70,7 +70,7 @@ section[id] {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.85rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 .site-nav .nav-link:hover {
