@@ -2,15 +2,19 @@ const PLACEHOLDER =
   "data:image/svg+xml;utf8," +
   encodeURIComponent(
     '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">' +
-      '<rect width="400" height="600" fill="#f0e8d8"/>' +
-      '<rect x="20" y="20" width="360" height="560" fill="none" stroke="#d4a5a5" stroke-width="3"/>' +
-      '<text x="200" y="310" font-family="serif" font-size="28" text-anchor="middle" fill="#6d2232">Cover coming soon</text>' +
-      "</svg>"
+    '<rect width="400" height="600" fill="#f0e8d8"/>' +
+    '<rect x="20" y="20" width="360" height="560" fill="none" stroke="#d4a5a5" stroke-width="3"/>' +
+    '<text x="200" y="310" font-family="serif" font-size="28" text-anchor="middle" fill="#6d2232">Cover coming soon</text>' +
+    "</svg>"
   );
 
 let books = [];
 let activeGenre = "All";
 let searchQuery = "";
+
+function sortTitle(title) {
+  return title.replace(/^the\s+/i, "");
+}
 
 const bookGrid = document.getElementById("bookGrid");
 const genreFilters = document.getElementById("genreFilters");
@@ -28,7 +32,9 @@ fetch("books.json")
     return response.json();
   })
   .then((data) => {
-    books = data;
+    books = data.sort((a, b) =>
+      sortTitle(a.title).localeCompare(sortTitle(b.title))
+    );
     renderGenreFilters();
     renderBooks();
   })
@@ -51,7 +57,7 @@ function getGenres() {
       }
     });
   });
-  return genres;
+  return genres.sort();
 }
 
 function countByGenre(genre) {
@@ -63,9 +69,8 @@ function renderGenreFilters() {
   genreFilters.innerHTML = genres
     .map((genre) => {
       const n = genre === "All" ? books.length : countByGenre(genre);
-      return `<button type="button" class="filter-btn${
-        genre === activeGenre ? " active" : ""
-      }" data-genre="${genre}">${genre} (${n})</button>`;
+      return `<button type="button" class="filter-btn${genre === activeGenre ? " active" : ""
+        }" data-genre="${genre}">${genre} (${n})</button>`;
     })
     .join("");
 }

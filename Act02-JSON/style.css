@@ -171,7 +171,18 @@ section[id] {
   border-bottom: 2px solid var(--oxblood);
 }
 
+.filter-row {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filter-row::-webkit-scrollbar {
+  display: none;
+}
+
 .filter-btn {
+  flex: 0 0 auto;
+  white-space: nowrap;
   background: none;
   border: 0;
   border-bottom: 2px solid transparent;
@@ -181,7 +192,6 @@ section[id] {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
 .filter-btn:hover {
   color: var(--oxblood);
 }
