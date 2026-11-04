@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garden Almanac: Plants vs. Zombies Encyclopedia</title>
+    <meta name="description" content="Search, browse, and view Plants vs. Zombies characters in a game-style Almanac." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-2">
+        <a href="index.html" class="brand-logo text-decoration-none" aria-label="Garden Almanac home">
+          <span class="brand-flower" aria-hidden="true"></span>
+          <span class="brand-words">
+            <span class="logo-garden">Garden</span>
+            <span class="logo-almanac">Almanac</span>
+          </span>
+        </a>
+        <div class="d-flex gap-2">
+          <a href="#collection" class="nav-pill nav-pill-plant" id="navPlants">
+            <img src="https://pvz-2-api.vercel.app/assets/plants/Sunflower.png" alt="" />
+            <span>Plants</span>
+          </a>
+          <a href="#collection" class="nav-pill nav-pill-zombie" id="navZombies">
+            <img src="https://pvz-2-api.vercel.app/assets/zombies/basic%20zombie.png" alt="" />
+            <span>Zombies</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-sun" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="marker-patch patch-plants">
+            <figure class="garden-marker marker-plant marker-a">
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Wall-nut.png" alt="Wall-nut" />
+              <figcaption class="marker-label">Wall-nut</figcaption>
+            </figure>
+            <figure class="garden-marker marker-plant marker-b">
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Sunflower.png" alt="Sunflower" />
+              <figcaption class="marker-label">Sunflower</figcaption>
+            </figure>
+            <figure class="garden-marker marker-plant marker-c">
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Peashooter.png" alt="Peashooter" />
+              <figcaption class="marker-label">Peashooter</figcaption>
+            </figure>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center hero-copy">
+            <p class="hero-kicker">Welcome to Crazy Dave's Garden</p>
+            <h1 class="hero-title" id="heroTitle">
+              <span class="title-plants">Plants</span>
+              <span class="title-vs">vs.</span>
+              <span class="title-zombies">Zombies</span>
+            </h1>
+            <div class="hero-ribbon">Encyclopedia</div>
+            <div class="hero-note">
+              <p class="hero-text">
+                Every seed packet and every shambling foe, catalogued in one Almanac. Search the lawn, flip through the pages, and open
+                any entry to read its stats and story.
+              </p>
+            </div>
+            <a href="#collection" class="btn btn-game btn-game-green btn-hero">
+              Open the Almanac <span class="cta-arrow" aria-hidden="true">&#9660;</span>
+            </a>
+
+            <div class="hero-mini d-flex d-lg-none justify-content-center flex-wrap gap-2 mt-4" aria-hidden="true">
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Wall-nut.png" alt="" class="mini-plant" />
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Sunflower.png" alt="" class="mini-plant" />
+              <img src="https://pvz-2-api.vercel.app/assets/plants/Peashooter.png" alt="" class="mini-plant" />
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/basic%20zombie.png" alt="" class="mini-zombie" />
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/conehead%20zombie.png" alt="" class="mini-zombie" />
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/buckethead%20zombie.png" alt="" class="mini-zombie" />
+            </div>
+          </div>
+
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="marker-patch patch-zombies">
+            <figure class="garden-marker marker-zombie marker-a">
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/buckethead%20zombie.png" alt="Buckethead Zombie" />
+              <figcaption class="marker-label">Buckethead Zombie</figcaption>
+            </figure>
+            <figure class="garden-marker marker-zombie marker-b">
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/conehead%20zombie.png" alt="Conehead Zombie" />
+              <figcaption class="marker-label">Conehead Zombie</figcaption>
+            </figure>
+            <figure class="garden-marker marker-zombie marker-c">
+              <img src="https://pvz-2-api.vercel.app/assets/zombies/basic%20zombie.png" alt="Basic Zombie" />
+              <figcaption class="marker-label">Basic Zombie</figcaption>
+            </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-grass" aria-hidden="true"></div>
+    </section>
+
+    <main class="almanac-section" id="collection">
+      <div class="container">
+        <div class="category-tabs d-flex gap-2">
+          <button type="button" class="category-tab tab-plants active" id="plantsTab">
+            <img src="https://pvz-2-api.vercel.app/assets/plants/Sunflower.png" alt="" />
+            <span>Plants</span>
+          </button>
+          <button type="button" class="category-tab tab-zombies" id="zombiesTab">
+            <img src="https://pvz-2-api.vercel.app/assets/zombies/basic%20zombie.png" alt="" />
+            <span>Zombies</span>
+          </button>
+        </div>
+
+        <div class="wood-frame" id="woodFrame">
+          <div class="row g-3 align-items-center mb-3">
+            <div class="col-lg-5">
+              <h2 class="frame-title mb-0" id="collectionTitle">Plant Almanac</h2>
+            </div>
+            <div class="col-lg-7">
+              <form class="search-box d-flex" id="searchForm" role="search">
+                <input type="search" class="form-control search-input" id="searchInput" placeholder="Search for a plant..." aria-label="Search characters" />
+                <button type="submit" class="btn btn-game btn-game-green search-btn">Search</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="statusArea"></div>
+
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-3" id="characterGrid"></div>
+
+          <div class="frame-footer d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4">
+            <p class="collected-count mb-0" id="resultCount"></p>
+            <nav aria-label="Almanac pages">
+              <ul class="pagination game-pagination mb-0">
+                <li class="page-item" id="prevItem">
+                  <button type="button" class="page-link" id="prevBtn">&#9664; Previous</button>
+                </li>
+                <li class="page-item active">
+                  <span class="page-link" id="pageNumber">Page 1 of 1</span>
+                </li>
+                <li class="page-item" id="nextItem">
+                  <button type="button" class="page-link" id="nextBtn">Next &#9654;</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grass" aria-hidden="true"></div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <a href="index.html" class="brand-logo text-decoration-none" aria-label="Garden Almanac home">
+              <span class="brand-flower" aria-hidden="true"></span>
+              <span class="brand-words">
+                <span class="logo-garden">Garden</span>
+                <span class="logo-almanac">Almanac</span>
+              </span>
+            </a>
+            <p class="footer-tagline">A fan-made Plants vs. Zombies encyclopedia. Browse every plant and zombie, then dig into their stats and stories.</p>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-links list-unstyled mb-0">
+              <li><a href="index.html?category=plants">Plants</a></li>
+              <li><a href="index.html?category=zombies">Zombies</a></li>
+              <li><a href="#">Back to top</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <h2 class="footer-heading">Data Source</h2>
+            <div class="footer-credit">
+              <p class="mb-2">
+                Character data from the
+                <a href="https://github.com/code-cracked/plants-vs-zombies-api" class="footer-link" target="_blank" rel="noopener">Plants vs. Zombies API</a>
+              </p>
+              <p class="mb-0 footer-small">
+                Images from <a href="https://pvz-2-api.vercel.app" class="footer-link" target="_blank" rel="noopener">pvz-2-api.vercel.app</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+          <p class="mb-0">Garden Almanac &middot; Character data from the Plants vs. Zombies API</p>
+          <p class="mb-0">Fan project for learning. Plants vs. Zombies belongs to PopCap Games / EA.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
