@@ -72,7 +72,6 @@ function showCharacter(data) {
   const name = formatLabel(data.name || characterName);
   document.title = name + " | Garden Almanac";
 
-  let description = "";
   let family = "";
   let statsHtml = "";
 
@@ -81,11 +80,7 @@ function showCharacter(data) {
     const value = data[key];
 
     if (lowerKey === "name" || lowerKey === "image") continue;
-
-    if (lowerKey === "description") {
-      description = value;
-      continue;
-    }
+    if (lowerKey === "description" || lowerKey === "story") continue;
 
     if (lowerKey === "family") family = value;
 
@@ -113,15 +108,9 @@ function showCharacter(data) {
     imageHtml = `<img src="${IMAGE_BASE + encodeURI(data.image)}" alt="${name}" class="detail-img" />`;
   }
 
+  const story = data.story || data.description || "";
   let storyHtml = `<p class="almanac-text">The API has no story entry for this character.</p>`;
-  if (description !== "") {
-    storyHtml = `<p class="almanac-text">${description}</p>`;
-  }
-
-  let introHtml = "";
-  if (description !== "") {
-    introHtml = `<p class="almanac-intro">${description.split(". ")[0].replace(/\.$/, "")}.</p>`;
-  }
+  if (story !== "") storyHtml = `<p class="almanac-text">${story}</p>`;
 
   const themeClass = category === "plants" ? "theme-plants" : "theme-zombies";
 
@@ -138,7 +127,6 @@ function showCharacter(data) {
         <div class="col-lg-7">
           <div class="info-panel h-100">
             <span class="detail-tag">${tag}</span>
-            ${introHtml}
             <div class="tab-content">
               <div class="tab-pane fade show active" id="statsPane" role="tabpanel">
                 <div class="row g-3">${statsHtml}</div>
