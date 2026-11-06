@@ -17,8 +17,6 @@ let currentCategory = "plants";
 
 const plantsTab = document.getElementById("plantsTab");
 const zombiesTab = document.getElementById("zombiesTab");
-const navPlants = document.getElementById("navPlants");
-const navZombies = document.getElementById("navZombies");
 const woodFrame = document.getElementById("woodFrame");
 const collectionTitle = document.getElementById("collectionTitle");
 const searchForm = document.getElementById("searchForm");
@@ -249,14 +247,6 @@ plantsTab.addEventListener("click", function () {
 });
 
 zombiesTab.addEventListener("click", function () {
-  switchCategory("zombies");
-});
-
-navPlants.addEventListener("click", function () {
-  switchCategory("plants");
-});
-
-navZombies.addEventListener("click", function () {
   switchCategory("zombies");
 });
 

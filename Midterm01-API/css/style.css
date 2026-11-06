@@ -296,7 +296,7 @@ h3,
   margin: 1rem 0 1.5rem;
   padding: 0.35rem 2.2rem;
   font-family: "Lilita One", sans-serif;
-  font-size: clamp(1.4rem, 3.6vw, 2.1rem);
+  font-size: clamp(1rem, 2.8vw, 1.6rem);
   color: #ffd23f;
   -webkit-text-stroke: 1px #6b2a0d;
   paint-order: stroke fill;
@@ -377,6 +377,7 @@ h3,
 
 .cta-arrow {
   display: inline-block;
+  vertical-align: 3px;
   margin-left: 0.35rem;
   font-size: 0.9rem;
   animation: cta-bounce 1.4s ease-in-out infinite;
