@@ -126,7 +126,7 @@ function showCharacter(data) {
         </div>
         <div class="col-lg-7">
           <div class="info-panel h-100">
-            <span class="detail-tag">${tag}</span>
+            <span class="detail-tag">CHARACTER DETAILS</span>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="statsPane" role="tabpanel">
                 <div class="row g-3">${statsHtml}</div>
