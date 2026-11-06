@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <circle cx="21" cy="21" r="19.5" fill="#ffd23f"/>
+  <path id="petal" d="M21 21V2.5a18.5 18.5 0 0 1 9.25 2.48z" fill="#f5a51a"/>
+  <use href="#petal" transform="rotate(30 21 21)" fill="#ffd23f"/>
+  <use href="#petal" transform="rotate(60 21 21)"/>
+  <use href="#petal" transform="rotate(90 21 21)" fill="#ffd23f"/>
+  <use href="#petal" transform="rotate(120 21 21)"/>
+  <use href="#petal" transform="rotate(150 21 21)" fill="#ffd23f"/>
+  <use href="#petal" transform="rotate(180 21 21)"/>
+  <use href="#petal" transform="rotate(210 21 21)" fill="#ffd23f"/>
+  <use href="#petal" transform="rotate(240 21 21)"/>
+  <use href="#petal" transform="rotate(270 21 21)" fill="#ffd23f"/>
+  <use href="#petal" transform="rotate(300 21 21)"/>
+  <use href="#petal" transform="rotate(330 21 21)" fill="#ffd23f"/>
+  <circle cx="21" cy="21" r="7" fill="#5a3312"/>
+  <circle cx="21" cy="21" r="5.7" fill="#7a4a1c"/>
+  <circle cx="21" cy="21" r="19.5" fill="none" stroke="#4b2d16" stroke-width="3"/>
+</svg>
